@@ -15,6 +15,8 @@ class RealtyInitializator
 
 	public function __construct()
 	{
+		// здесь происходит процесс глобальной регистрации ядра по сущности (CPT)
+		// используются внутренние методы
 		$this->register_cpt();
 		$this->add_acf_fields();
 		$this->add_taxes();
@@ -35,15 +37,13 @@ class RealtyInitializator
 
 	private function add_rewrite_rules(): void
 	{
+		// инициализирует класс перезаписи url
 		new RealtyRewrite();
 	}
 
 	private function add_acf_fields(): void
 	{
-		/**
-		 * Register ACF fields
-		 */
-
+		// регистрирует acf поля (как раз по поводу вопроса из ТЗ)
 		$banner = new FieldsBuilder('Additional info');
 		$banner
 			->addText('unit_ref', [

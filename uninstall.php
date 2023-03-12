@@ -4,6 +4,7 @@ if(!defined('WP_UNINSTALL_PLUGIN')){
 	die;
 }
 
+// При деактивации и удалении
 // Удаление страниц
 $page_slugs = array( 'buy', 'rent' );
 
