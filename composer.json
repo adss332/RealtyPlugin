@@ -1,0 +1,9 @@
+{
+  "require": {
+    "stoutlogic/acf-builder": "^1.12"
+  },
+
+  "autoload": {
+    "psr-4": {"RealtyCore\\": "./src"}
+  }
+}
